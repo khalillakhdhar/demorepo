@@ -5,7 +5,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.repo.control.CategorieService;
 import com.repo.control.EmployeeService;
+import com.repo.entities.Categorie;
 import com.repo.entities.Employee;
 import com.repo.repositories.EmployeeRepository;
 
@@ -34,6 +36,10 @@ la bonne solution pour le couplage:
 EmployeeService employeeService; // affaiblie la dépendence et le couplage en appelant une classe du 
 // niveau supérieur à celui de la repository et injectable cas 1 couplage =6 cas 2 couplage totale = 3
 	
+
+@Autowired
+CategorieService categorieService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
@@ -44,7 +50,7 @@ EmployeeService employeeService; // affaiblie la dépendence et le couplage en a
 	System.out.println("hello spring am here");
 	Employee emp1=employeeService.createOneEmployee(new Employee(1,"Lakhdhar","Khalil","khalil@gmail.com","azerty",19,"user"));
 	System.out.println(emp1.toString()+" is added");
-	
+categorieService.addOneCategory(new Categorie(0,"formation"));
 		
 	}
 
