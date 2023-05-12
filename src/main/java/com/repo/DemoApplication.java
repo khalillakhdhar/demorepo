@@ -47,10 +47,11 @@ CategorieService categorieService;
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-	System.out.println("hello spring am here");
+	/*System.out.println("hello spring am here");
 	Employee emp1=employeeService.createOneEmployee(new Employee(1,"Lakhdhar","Khalil","khalil@gmail.com","azerty",19,"user"));
 	System.out.println(emp1.toString()+" is added");
 categorieService.addOneCategory(new Categorie(1,"formation"));
+*/
 		
 	}
 

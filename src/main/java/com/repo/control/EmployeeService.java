@@ -14,16 +14,17 @@ public class EmployeeService implements EmployeeInterface {
 // appel de la repository
 	@Autowired
 	EmployeeRepository employeeRepository; // appel de la repo de user avec un couplage lache entre deux injectable 
-	
+	@Override
 	public List<Employee> getAllEmployee()
 	{
 		return employeeRepository.findAll();
 	}
-	
+	@Override
 	public Employee createOneEmployee(Employee employee)
 	{
 		return employeeRepository.save(employee);
 	}
+	@Override
 	public Employee findUserById(long id)
 	{
 		return employeeRepository.findById(id).get();
