@@ -20,7 +20,7 @@ import jakarta.validation.Valid;
 public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService; 
-	@GetMapping()
+	@GetMapping
 	public List<Employee> getEmployees()
 	{
 		return employeeService.getAllEmployee();
