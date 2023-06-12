@@ -21,15 +21,14 @@ public class Employee {
 private long id;
 @Column(nullable = false)
 
-private String nom,prenom;
+private String nom,prenom,tel;
 
 @Email
 @Column(unique = true)
 private String email;
 
-private String mdp;
-@Min(12)
-private int age;
+private String password;
 
-private String fonction;
+
+private String grade,photo;
 }
