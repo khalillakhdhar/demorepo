@@ -35,6 +35,11 @@ public class EmployeeService implements EmployeeInterface {
 		// TODO Auto-generated method stub
 		employeeRepository.deleteById(id);
 	}
+	@Override
+	public Employee AuthEmployee(String email, String password) {
+		// TODO Auto-generated method stub
+		return employeeRepository.findByEmailAndPassword(email, password);
+	}
 	
 	//
 }

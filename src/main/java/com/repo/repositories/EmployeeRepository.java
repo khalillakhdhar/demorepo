@@ -8,6 +8,5 @@ import com.repo.entities.Employee;
 
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-
-	
+Employee findByEmailAndPassword(String email,String password);	
 }

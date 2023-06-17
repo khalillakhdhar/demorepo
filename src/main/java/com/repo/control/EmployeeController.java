@@ -41,4 +41,9 @@ public void deleteOne(long id)
 {
 employeeService.deleteEmployee(id);	
 }
+@PostMapping("/auth")
+public Employee auth(@RequestBody  Employee employee)
+{
+return employeeService.AuthEmployee(employee.getEmail(), employee.getPassword());	
+}
 }
