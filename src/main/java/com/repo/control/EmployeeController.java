@@ -37,7 +37,7 @@ public Employee getOneEmployee(@PathVariable long id)
 return employeeService.findUserById(id);	
 }
 @DeleteMapping("/{id}")
-public void deleteOne(long id)
+public void deleteOne(@PathVariable long id)
 {
 employeeService.deleteEmployee(id);	
 }

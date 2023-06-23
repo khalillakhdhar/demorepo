@@ -33,7 +33,7 @@ public class EmployeeService implements EmployeeInterface {
 	@Override
 	public void deleteEmployee(long id) {
 		// TODO Auto-generated method stub
-		employeeRepository.deleteById(id);
+		employeeRepository.deleteById(id);;
 	}
 	@Override
 	public Employee AuthEmployee(String email, String password) {
